@@ -1,0 +1,47 @@
+[gd_scene load_steps=9 format=3 uid="uid://r003er32iip1"]
+
+[ext_resource type="Texture2D" uid="uid://bt1o0qxb1b1mk" path="res://assets/container.png" id="1_kj5hv"]
+[ext_resource type="Texture2D" uid="uid://boe8vm044na37" path="res://assets/fruit1.png" id="2_wuy2x"]
+[ext_resource type="Texture2D" uid="uid://b4qbqhqxyjk2n" path="res://assets/fruit2.png" id="3_8uhpe"]
+[ext_resource type="Texture2D" uid="uid://bdh8ltx5ngq4t" path="res://assets/fruit3.png" id="4_dmrn1"]
+[ext_resource type="Texture2D" uid="uid://v1oycg02xfg4" path="res://assets/fruit4.png" id="5_q18ni"]
+[ext_resource type="Texture2D" uid="uid://d08plcjwwtoap" path="res://assets/fruit5.png" id="6_o24hm"]
+
+[sub_resource type="Gradient" id="Gradient_bc50i"]
+colors = PackedColorArray(0.47451, 0.623529, 0.870588, 1, 0.643137, 0.980392, 0.796078, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ky1jw"]
+gradient = SubResource("Gradient_bc50i")
+width = 1920
+height = 1080
+
+[node name="MainGame" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_ky1jw")
+centered = false
+
+[node name="Container" type="Sprite2D" parent="."]
+texture = ExtResource("1_kj5hv")
+centered = false
+
+[node name="Fruit1" type="Sprite2D" parent="."]
+position = Vector2(1547, 409)
+scale = Vector2(0.375, 0.375)
+texture = ExtResource("2_wuy2x")
+
+[node name="Fruit2" type="Sprite2D" parent="."]
+position = Vector2(1492, 854)
+texture = ExtResource("3_8uhpe")
+
+[node name="Fruit3" type="Sprite2D" parent="."]
+position = Vector2(1508, 624)
+texture = ExtResource("4_dmrn1")
+
+[node name="Fruit4" type="Sprite2D" parent="."]
+position = Vector2(1178, 620)
+texture = ExtResource("5_q18ni")
+
+[node name="Fruit5" type="Sprite2D" parent="."]
+position = Vector2(1451, -176)
+texture = ExtResource("6_o24hm")
