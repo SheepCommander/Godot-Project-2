@@ -48,3 +48,10 @@ texture = ExtResource("6_75eev")
 
 [node name="Fruit1" parent="." instance=ExtResource("6_34t12")]
 position = Vector2(1501, 410)
+
+[node name="Fruit6" parent="." instance=ExtResource("6_34t12")]
+position = Vector2(1300, 477)
+
+[node name="Fruit7" parent="." instance=ExtResource("6_34t12")]
+position = Vector2(1219, 349)
+mass = 0.5

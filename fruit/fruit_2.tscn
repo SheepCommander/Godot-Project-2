@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://g0b28pjqh3oo"]
+
+[ext_resource type="Texture2D" uid="uid://b4qbqhqxyjk2n" path="res://assets/fruit2.png" id="2_jnltg"]
+
+[node name="Fruit2" type="RigidBody2D"]
+mass = 0.01
+
+[node name="Fruit2" type="Sprite2D" parent="."]
+texture = ExtResource("2_jnltg")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(130, -10, 145, -8, 156, 6, 153, 16, 128, 28, 122, 47, 107, 61, 87, 100, 74, 100, 61, 80, 39, 101, 23, 97, 23, 63, 0, 69, -23, 66, -43, 43, -68, 95, -83, 105, -97, 67, -117, 92, -136, 70, -135, 38, -143, 17, -139, -2, -107, -46, -157, -77, -157, -92, -141, -108, -126, -108, -113, -100, -90, -121, -80, -118, -67, -101, -71, -67, -40, -76, 24, -74, 94, -52, 115, -36)
+
+[node name="MergeArea" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MergeArea"]
+polygon = PackedVector2Array(-161, -41, -189, -88, -148, -126, -78, -137, -49, -121, -47, -96, 43, -94, 118, -69, 151, -31, 175, -9, 171, 18, 142, 47, 120, 71, 106, 113, 62, 118, 62, 118, 9, 117, 5, 82, -37, 79, -72, 120, -106, 108, -138, 119, -163, 73)

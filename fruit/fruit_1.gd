@@ -1,30 +1,43 @@
 extends RigidBody2D
 
-@export var FruitNumber: int
-@onready var merge_radius := $MergeRadius
-@onready var fruit_inertia := 1.0 / PhysicsServer2D.body_get_direct_state(get_rid()).inverse_inertia
+@export var FRUIT_NUMBER: int
+@onready var merge_area : Area2D = $MergeArea
+@onready var group := "Fruit%s" % FRUIT_NUMBER
+@onready var next_fruit := preload("res://fruit/fruit_2.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	add_to_group("Fruit"+str(FruitNumber))
+	add_to_group(group)
 	max_contacts_reported = 100
 	contact_monitor = true
-	
+
 	body_entered.connect(_on_body_entered)
-	
-	# Give a random impulse lol
-	print("start")
-	await get_tree().create_timer(3).timeout
-	print(fruit_inertia)
-	apply_torque_impulse(500)
-	#apply_torque_impulse(fruit_inertia * 0.5)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	
-	pass
 
 
-func _on_body_entered(body: Node):
+func _on_body_entered(_body: Node):
+	var same_fruits = merge_area.get_overlapping_bodies().filter(_is_in_same_group)
+	if same_fruits.size() == 1:
+		return #No fruits of the same type collided
 	
-	pass
+	var bodies := same_fruits.size() + 0 #Include self!!
+	print("%s says %s, %s" % [name,bodies,same_fruits])
+	var avg_pos := global_position
+	same_fruits.map(func(body): avg_pos += body.global_position)
+	avg_pos /= bodies
+	var avg_rotation := global_rotation
+	same_fruits.map(func(body): avg_rotation += body.global_rotation)
+	avg_rotation /= bodies
+	print("%s, %s" % [avg_pos,avg_rotation])
+	
+	var new_fruit := next_fruit.instantiate()
+	new_fruit.global_position = avg_pos
+	new_fruit.global_rotation = avg_rotation
+	get_tree().root.add_child(new_fruit)
+	
+	same_fruits.map(func(body): body.queue_free())
+	queue_free()
+
+func _is_in_same_group(body) -> bool:
+	print("%s - %s" % [body,is_in_group(group)])
+	return body.is_in_group(group)
+
