@@ -32,7 +32,7 @@ func _on_body_entered(_body: Node):
 	var new_fruit := next_fruit.instantiate()
 	new_fruit.global_position = avg_pos
 	new_fruit.global_rotation = avg_rotation
-	get_tree().root.add_child(new_fruit)
+	get_tree().current_scene.call_deferred("add_child",new_fruit)
 	
 	same_fruits.map(func(body): body.queue_free())
 	queue_free()
