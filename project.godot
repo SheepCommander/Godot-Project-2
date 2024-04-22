@@ -10,27 +10,16 @@ config_version=5
 
 [application]
 
-config/name="SheepSuika"
-config/description="Suika game by SheepCommander"
-config/version="0.0.0.a"
-run/main_scene="res://levels/main_menu.tscn"
+config/name="SheepStuff"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
-
-[display]
-
-window/size/viewport_width=1920
-window/size/viewport_height=1080
-window/size/resizable=false
 
 [file_customization]
 
 folder_colors={
-"res://assets/": "green",
-"res://audio/": "teal"
+"res://sword/": "gray"
 }
 
 [rendering]
 
-renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
