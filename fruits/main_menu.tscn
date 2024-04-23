@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://luxx6akhj6jb"]
+
+[ext_resource type="Texture2D" uid="uid://0eyfyx2hr40s" path="res://assets/container.png" id="1_wxja8"]
+[ext_resource type="Texture2D" uid="uid://bums6s17k2hnn" path="res://assets/menu.png" id="2_dev33"]
+[ext_resource type="PackedScene" uid="uid://d2upatc1p02a6" path="res://fruits/fruit_1_.tscn" id="3_n80td"]
+[ext_resource type="PackedScene" uid="uid://cfnp0p1q7ux45" path="res://fruits/fruit_2_.tscn" id="4_5n737"]
+
+[node name="MainMenu" type="Node"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.510116, 0.32349, 0.687559, 1)
+
+[node name="Menu" type="Sprite2D" parent="."]
+texture = ExtResource("2_dev33")
+centered = false
+
+[node name="Container" type="StaticBody2D" parent="."]
+
+[node name="Container" type="Sprite2D" parent="Container"]
+texture = ExtResource("1_wxja8")
+centered = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Container"]
+polygon = PackedVector2Array(949, 292, 1031, 304, 1029, 972, 1691, 980, 1675, 296, 1763, 286, 1777, 1062, 933, 1076)
+
+[node name="Fruit1_" parent="." instance=ExtResource("3_n80td")]
+position = Vector2(1128, 877)
+
+[node name="Fruit1_2" parent="." instance=ExtResource("3_n80td")]
+position = Vector2(1331, 874)
+
+[node name="Fruit1_3" parent="." instance=ExtResource("3_n80td")]
+position = Vector2(1244, 728)
+
+[node name="Fruit2_" parent="." instance=ExtResource("4_5n737")]
+position = Vector2(1504, 541)

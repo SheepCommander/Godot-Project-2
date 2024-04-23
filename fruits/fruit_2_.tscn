@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfnp0p1q7ux45"]
+
+[ext_resource type="Script" path="res://fruits/fruit_2.gd" id="1_c1p3y"]
+[ext_resource type="Texture2D" uid="uid://dyypbab2bw8aj" path="res://assets/fruit2.png" id="1_hd4ya"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qlu1q"]
+radius = 86.0
+height = 332.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1n8fg"]
+radius = 126.0
+height = 396.0
+
+[node name="Fruit2_" type="RigidBody2D"]
+script = ExtResource("1_c1p3y")
+FRUIT_LAYER = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_hd4ya")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5, 8)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_qlu1q")
+
+[node name="MergeArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MergeArea"]
+position = Vector2(-5, 8)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_1n8fg")
