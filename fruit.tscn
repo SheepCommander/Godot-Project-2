@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cd4tcviu2157x"]
+
+[ext_resource type="Script" path="res://fruits/fruit_1.gd" id="1_myotu"]
+
+[node name="RigidBody2D" type="RigidBody2D"]
+script = ExtResource("1_myotu")

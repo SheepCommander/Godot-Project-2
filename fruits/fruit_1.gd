@@ -5,6 +5,7 @@ extends RigidBody2D
 @export var next_fruit : PackedScene = preload("res://fruits/fruit_2_.tscn")
 
 func _ready():
+	name = get_parent().name
 	max_contacts_reported = 100
 	contact_monitor = true
 	
@@ -19,13 +20,6 @@ func _on_body_entered(_body): #On Collision
 	if fruits.size() <= 1:
 		return
 	prints(self.name, fruits)
-	
-	#var avg_pos := Vector2(0,0)
-	#fruits.map(func(body): avg_pos += body.global_position)
-	#avg_pos /= fruits.size()
-	#var avg_rotation := 0.0
-	#fruits.map(func(body): avg_rotation += body.global_rotation)
-	#avg_rotation /= fruits.size()
 	
 	var new_fruit := next_fruit.instantiate()
 	new_fruit.global_position = global_position

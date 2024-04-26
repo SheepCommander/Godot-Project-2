@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://luxx6akhj6jb"]
+[gd_scene load_steps=4 format=3 uid="uid://luxx6akhj6jb"]
 
 [ext_resource type="Texture2D" uid="uid://0eyfyx2hr40s" path="res://assets/container.png" id="1_wxja8"]
 [ext_resource type="Texture2D" uid="uid://bums6s17k2hnn" path="res://assets/menu.png" id="2_dev33"]
 [ext_resource type="PackedScene" uid="uid://d2upatc1p02a6" path="res://fruits/fruit_1_.tscn" id="3_n80td"]
-[ext_resource type="PackedScene" uid="uid://cfnp0p1q7ux45" path="res://fruits/fruit_2_.tscn" id="4_5n737"]
 
 [node name="MainMenu" type="Node"]
 
@@ -29,13 +28,10 @@ centered = false
 polygon = PackedVector2Array(949, 292, 1031, 304, 1029, 972, 1691, 980, 1675, 296, 1763, 286, 1777, 1062, 933, 1076)
 
 [node name="Fruit1_" parent="." instance=ExtResource("3_n80td")]
-position = Vector2(1128, 877)
+position = Vector2(1161, 806)
 
 [node name="Fruit1_2" parent="." instance=ExtResource("3_n80td")]
-position = Vector2(1331, 874)
+position = Vector2(1481, 810)
 
 [node name="Fruit1_3" parent="." instance=ExtResource("3_n80td")]
-position = Vector2(1244, 728)
-
-[node name="Fruit2_" parent="." instance=ExtResource("4_5n737")]
-position = Vector2(1504, 541)
+position = Vector2(1170, 612)

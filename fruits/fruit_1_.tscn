@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://d2upatc1p02a6"]
 
 [ext_resource type="Texture2D" uid="uid://dwyyjd0qoyucn" path="res://assets/fruit1.png" id="1_olscw"]
-[ext_resource type="Script" path="res://fruits/fruit_1.gd" id="1_vhq0a"]
+[ext_resource type="PackedScene" uid="uid://cd4tcviu2157x" path="res://fruit.tscn" id="1_yc67x"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b58v1"]
 radius = 46.0
@@ -11,22 +11,23 @@ height = 156.0
 radius = 75.0
 height = 204.0
 
-[node name="Fruit1_" type="RigidBody2D"]
-script = ExtResource("1_vhq0a")
+[node name="Fruit1_" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="RigidBody2D" parent="." instance=ExtResource("1_yc67x")]
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
 texture = ExtResource("1_olscw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 position = Vector2(0, -3)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_b58v1")
 
-[node name="MergeArea" type="Area2D" parent="."]
+[node name="MergeArea" type="Area2D" parent="RigidBody2D"]
 collision_layer = 0
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MergeArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D/MergeArea"]
 position = Vector2(0, -7)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_kvf61")
