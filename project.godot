@@ -11,30 +11,13 @@ config_version=5
 [application]
 
 config/name="SheepStuff"
-run/main_scene="res://fruits/main_menu.tscn"
-config/features=PackedStringArray("4.2", "GL Compatibility")
+config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
-
-[display]
-
-window/size/viewport_width=1920
-window/size/viewport_height=1080
 
 [file_customization]
 
 folder_colors={
-"res://assets/": "red",
-"res://fruits/": "yellow",
-"res://music/": "teal",
+"res://assets/": "yellow",
+"res://music/": "pink",
 "res://sword/": "gray"
 }
-
-[layer_names]
-
-2d_physics/layer_1="Universal"
-2d_physics/layer_2="Fruit1"
-2d_physics/layer_3="Fruit2"
-
-[rendering]
-
-renderer/rendering_method.mobile="gl_compatibility"
