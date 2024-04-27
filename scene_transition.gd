@@ -4,23 +4,32 @@ extends Control
 @onready var animation_player := $AnimationPlayer
 
 @export_enum("Slide","Spin","Fade") var animation := "Slide"
-
+#TODO:
+#HACK:
+#FIXME:
 func _ready():
-	for i in range(5):
+	for i in range(3):
 		await get_tree().create_timer(1).timeout
 		slide()
 		await get_tree().create_timer(1).timeout
 		spin()
+		await get_tree().create_timer(1).timeout
+		fade()
 
-func _get_screenshot() -> ImageTexture:
+func _get_screenshot():
 	await RenderingServer.frame_post_draw
 	var img := get_viewport().get_texture().get_image()
-	return ImageTexture.create_from_image(img)
+	texture_rect.texture = ImageTexture.create_from_image(img)
+	texture_rect.pivot_offset = texture_rect.size/2
 
 func slide():
-	texture_rect.texture = await _get_screenshot()
+	await _get_screenshot()
 	animation_player.play("Slide")
 
 func spin():
-	texture_rect.texture = await _get_screenshot()
+	await _get_screenshot()
 	animation_player.play("Spin")
+
+func fade():
+	await _get_screenshot()
+	animation_player.play("Fade")
