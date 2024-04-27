@@ -49,3 +49,7 @@ wav={
 "force/max_rate_hz": 44100,
 "force/mono": false
 }
+
+[layer_names]
+
+3d_physics/layer_1="Global"
