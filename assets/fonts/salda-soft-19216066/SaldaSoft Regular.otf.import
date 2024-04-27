@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://yj6jjd2exmca"
+path="res://.godot/imported/SaldaSoft Regular.otf-7cffe98049b79eaa2316ec07fca129de.fontdata"
+
+[deps]
+
+source_file="res://assets/fonts/salda-soft-19216066/SaldaSoft Regular.otf"
+dest_files=["res://.godot/imported/SaldaSoft Regular.otf-7cffe98049b79eaa2316ec07fca129de.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

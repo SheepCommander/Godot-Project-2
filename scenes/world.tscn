@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://duoa7p1vvh415"]
+[gd_scene load_steps=3 format=3 uid="uid://duoa7p1vvh415"]
 
-[ext_resource type="PackedScene" uid="uid://dfwo0lls0way2" path="res://scenes/1dedenne.tscn" id="1_e5oj5"]
+[ext_resource type="PackedScene" uid="uid://dfwo0lls0way2" path="res://scenes/1_dedenne.tscn" id="1_e5oj5"]
+[ext_resource type="AudioStream" uid="uid://dtvcenyrsbrsy" path="res://assets/sounds/music/SWR Pre-Battle Theme - Drunk as I Like [fLswa5g08Y0].wav" id="2_cjwwc"]
 
 [node name="World" type="Node3D"]
 
@@ -16,3 +17,8 @@ transform = Transform3D(1, 0, 0, 0, 0.949168, 0.314771, 0, -0.314771, 0.949168, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
 use_collision = true
 size = Vector3(9, 1, 5)
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_cjwwc")
+autoplay = true
+bus = &"Music"
