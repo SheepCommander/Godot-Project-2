@@ -1,4 +1,5 @@
 extends RigidBody3D
+class_name Dedenne
 
 @export var fruit_layer := 2
 @export var next_fruit : PackedScene = load("res://scenes/2_sheep_derp.tscn")
@@ -35,6 +36,7 @@ func _merge(fruits):
 	
 	new_fruit.global_position = (fruits[0].global_position+fruits[1].global_position)/2
 	new_fruit.global_rotation = (fruits[0].global_rotation+fruits[1].global_rotation)/2
+	new_fruit.repeats = repeats
 	
 	merge_sfx.play()
 	
