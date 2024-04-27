@@ -1,5 +1,4 @@
 extends RigidBody3D
-class_name Dedenne
 
 @export var fruit_layer := 2
 @export var next_fruit : PackedScene = load("res://scenes/2_sheep_derp.tscn")
@@ -7,7 +6,6 @@ class_name Dedenne
 
 @onready var collide_sfx := $CollideSFX
 @onready var merge_sfx := $MergeSFX
-
 @onready var merge_area : Area3D = $MergeArea
 @onready var visibility_notifier = $VisibilityNotifier
 

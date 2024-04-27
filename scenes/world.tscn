@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://duoa7p1vvh415"]
+[gd_scene load_steps=13 format=3 uid="uid://duoa7p1vvh415"]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_54enq"]
 [ext_resource type="PackedScene" uid="uid://dfwo0lls0way2" path="res://scenes/1_dedenne.tscn" id="1_e5oj5"]
 [ext_resource type="Shader" path="res://resources/shaders/floor.gdshader" id="2_bbbjp"]
 [ext_resource type="AudioStream" uid="uid://dtvcenyrsbrsy" path="res://assets/sounds/music/SWR Pre-Battle Theme - Drunk as I Like [fLswa5g08Y0].wav" id="2_cjwwc"]
+[ext_resource type="PackedScene" uid="uid://cmqccydxangg7" path="res://scenes/scene_transition.tscn" id="2_lrwxl"]
 [ext_resource type="PackedScene" uid="uid://bedbfcirvtlgi" path="res://scenes/2_sheep_derp.tscn" id="3_50awl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_su2yl"]
@@ -30,6 +31,8 @@ point_count = 13
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_54enq")
+
+[node name="SceneTransition" parent="." instance=ExtResource("2_lrwxl")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_7cxdh")

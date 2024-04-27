@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://b0s7bid5v74uv"]
 
-[ext_resource type="Shader" path="res://resources/shaders/diablo.gdshader" id="1_sl1ml"]
-[ext_resource type="Texture2D" uid="uid://bpqfcdgfkeewf" path="res://assets/sprites/particles/BasicParticle.png" id="2_gh16t"]
+[ext_resource type="Shader" path="res://resources/shaders/diablo.gdshader" id="1_7aspu"]
+[ext_resource type="Texture2D" uid="uid://bpqfcdgfkeewf" path="res://assets/sprites/particles/BasicParticle.png" id="2_pyhi7"]
 
 [sub_resource type="Gradient" id="Gradient_sp7am"]
 offsets = PackedFloat32Array(0, 0.123529, 0.176471, 0.229412, 0.305882, 0.7)
@@ -12,7 +12,7 @@ gradient = SubResource("Gradient_sp7am")
 width = 2048
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_iho41"]
-shader = ExtResource("1_sl1ml")
+shader = ExtResource("1_7aspu")
 shader_parameter/scroll1 = Vector2(0.2, -0.3)
 shader_parameter/scroll2 = Vector2(0.2, -0.3)
 shader_parameter/tex2_scale = 0.5
@@ -37,9 +37,9 @@ scale_max = 0.5
 color_ramp = SubResource("GradientTexture1D_5qrtm")
 hue_variation_max = 1.0
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D" type="Node2D"]
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 material = SubResource("ShaderMaterial_iho41")
 process_material = SubResource("ParticleProcessMaterial_q7mgn")
-texture = ExtResource("2_gh16t")
+texture = ExtResource("2_pyhi7")
