@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://qv4uij4l08nt"
+path="res://.godot/imported/Touhou： SWR ~ Pre Battle Theme - Drunk as I Like - Traditional⧸Folk Remix [nBqw6hYGsho].wav-74304a7fcd5bbfd9eab68bab63c347e5.sample"
+
+[deps]
+
+source_file="res://assets/sounds/music/Touhou： SWR ~ Pre Battle Theme - Drunk as I Like - Traditional⧸Folk Remix [nBqw6hYGsho].wav"
+dest_files=["res://.godot/imported/Touhou： SWR ~ Pre Battle Theme - Drunk as I Like - Traditional⧸Folk Remix [nBqw6hYGsho].wav-74304a7fcd5bbfd9eab68bab63c347e5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

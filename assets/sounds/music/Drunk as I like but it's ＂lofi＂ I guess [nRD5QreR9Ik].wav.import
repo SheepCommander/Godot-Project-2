@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bk7lp3kfuucep"
+path="res://.godot/imported/Drunk as I like but it's ＂lofi＂ I guess [nRD5QreR9Ik].wav-4de2864bc163b4fb674bb2ccf8ceb6f6.sample"
+
+[deps]
+
+source_file="res://assets/sounds/music/Drunk as I like but it's ＂lofi＂ I guess [nRD5QreR9Ik].wav"
+dest_files=["res://.godot/imported/Drunk as I like but it's ＂lofi＂ I guess [nRD5QreR9Ik].wav-4de2864bc163b4fb674bb2ccf8ceb6f6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
