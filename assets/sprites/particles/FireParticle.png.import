@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qw81y15tbixo"
-path="res://.godot/imported/center.png-abb504dbc722a33996a17a459457fb77.ctex"
+uid="uid://cmmpxajkvgtf1"
+path="res://.godot/imported/FireParticle.png-30377d1bc5f66634dd64199fe40a0978.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/center.png"
-dest_files=["res://.godot/imported/center.png-abb504dbc722a33996a17a459457fb77.ctex"]
+source_file="res://assets/sprites/particles/FireParticle.png"
+dest_files=["res://.godot/imported/FireParticle.png-30377d1bc5f66634dd64199fe40a0978.ctex"]
 
 [params]
 

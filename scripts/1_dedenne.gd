@@ -2,25 +2,29 @@ extends RigidBody3D
 
 @export var fruit_layer := 2
 @export var next_fruit : PackedScene = load("res://scenes/2_sheep_derp.tscn")
+@export var repeats := 0 ##How many times the Suika loop has repeated
+
 @onready var collide_sfx := $CollideSFX
 @onready var merge_sfx := $MergeSFX
+
 @onready var merge_area : Area3D = $MergeArea
+@onready var visibility_notifier = $VisibilityNotifier
 
 func _ready():
 	max_contacts_reported = 2
 	contact_monitor = true
-	
 	merge_area.set_collision_mask_value(fruit_layer,true) #Listens for layer
 	self.set_collision_layer_value(fruit_layer,true) #Fruit exists on layer
 	
 	body_entered.connect(_on_body_entered)
+	visibility_notifier.screen_exited.connect(_on_visibility_notifier_screen_entered)
 
-## Calls _merge() if possible. Else, plays collision SFX.
+## Merges or plays SFX upon collission. See `_merge()`s
 func _on_body_entered(_body): #On Collision
 	var fruits := merge_area.get_overlapping_bodies()
-	prints(self.name, fruits)
 	if fruits.size() >= 2:
 		_merge(fruits)
+		prints(self.name, fruits)
 	else:
 		collide_sfx.play()
 
@@ -35,3 +39,8 @@ func _merge(fruits):
 	merge_sfx.play()
 	
 	fruits.map(func(body): body.queue_free())
+
+## Kills fruit after leaving screen
+func _on_visibility_notifier_screen_entered():
+	print(name + " died")
+	queue_free()

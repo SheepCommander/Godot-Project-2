@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://18xcdy7qr0o5"]
+
+[ext_resource type="Script" path="res://scripts/1_dedenne.gd" id="1_0b1eb"]
+[ext_resource type="Texture2D" uid="uid://snhfkva1o3i7" path="res://assets/sprites/suika/fruit4.png" id="1_11t5i"]
+[ext_resource type="PackedScene" uid="uid://boclsojvswhu4" path="res://scenes/5_earless.tscn" id="2_gev4p"]
+[ext_resource type="AudioStream" uid="uid://d1kvh6id0fuk5" path="res://assets/sounds/sfx/pop.wav" id="2_ws7dw"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_35gbi"]
+radius = 1.22141
+height = 6.34152
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wrbxk"]
+radius = 1.61764
+height = 7.45343
+
+[node name="4Ozi" type="RigidBody3D"]
+script = ExtResource("1_0b1eb")
+fruit_layer = 5
+next_fruit = ExtResource("2_gev4p")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+texture = ExtResource("1_11t5i")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 0, -0.3, 0)
+shape = SubResource("CapsuleShape3D_35gbi")
+
+[node name="MergeArea" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MergeArea"]
+transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 0, -0.378815, 0)
+shape = SubResource("CapsuleShape3D_wrbxk")
+
+[node name="CollideSFX" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_ws7dw")
+bus = &"SFX"
+
+[node name="MergeSFX" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_ws7dw")
+bus = &"SFX"
+
+[node name="VisibilityNotifier" type="VisibleOnScreenNotifier3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.283468, 0)
+aabb = AABB(-1.18112, -3.28351, -1, 2.36224, 6.56702, 2)

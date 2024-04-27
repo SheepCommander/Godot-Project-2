@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://yqgx7cqxu1f8"]
 
-[ext_resource type="Texture2D" uid="uid://0eyfyx2hr40s" path="res://assets/sprites/container.png" id="1_w2qdj"]
-[ext_resource type="Texture2D" uid="uid://bums6s17k2hnn" path="res://assets/sprites/menu.png" id="2_0gs1p"]
+[ext_resource type="Texture2D" uid="uid://0eyfyx2hr40s" path="res://assets/sprites/suika/container.png" id="1_w2qdj"]
+[ext_resource type="Texture2D" uid="uid://bums6s17k2hnn" path="res://assets/sprites/suika/menu.png" id="2_0gs1p"]
 [ext_resource type="Theme" uid="uid://5yabg3m5uvcq" path="res://resources/menu_theme.tres" id="3_m8t11"]
 [ext_resource type="FontFile" uid="uid://cbjf4api3kg7g" path="res://assets/fonts/YUYUKO.otf" id="4_x2m32"]
 [ext_resource type="Script" path="res://scripts/VolumeSlider.gd" id="5_qm47b"]
