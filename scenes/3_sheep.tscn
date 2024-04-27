@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://baruo7vxyyig1"]
+
+[ext_resource type="Texture2D" uid="uid://c4rnpihlr0ykc" path="res://assets/sprites/fruit3.png" id="1_k267w"]
+[ext_resource type="AudioStream" uid="uid://d1kvh6id0fuk5" path="res://assets/sounds/sfx/pop.wav" id="2_volnd"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hkthx"]
+radius = 0.870044
+height = 3.26346
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qo72g"]
+radius = 1.34172
+height = 4.8697
+
+[node name="3Sheep" type="RigidBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -0.197592, -0.0191218, 0)
+shape = SubResource("CapsuleShape3D_hkthx")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+texture = ExtResource("1_k267w")
+
+[node name="CollideSFX" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_volnd")
+bus = &"SFX"
+
+[node name="MergeSFX" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_volnd")
+bus = &"SFX"
+
+[node name="MergeArea" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MergeArea"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -0.0382438, -0.127479, 0)
+shape = SubResource("CapsuleShape3D_qo72g")
