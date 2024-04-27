@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://byogepucn8tmy"
-path.s3tc="res://.godot/imported/T_trail12.png-8a0bd9c5c8f08b574d2a34cbf187ef1f.s3tc.ctex"
+path.s3tc="res://.godot/imported/T_trail12.png-cbb866aa3f7bfaeb89e8089e7e0a7f32.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://sword/textures/T_trail12.png"
-dest_files=["res://.godot/imported/T_trail12.png-8a0bd9c5c8f08b574d2a34cbf187ef1f.s3tc.ctex"]
+source_file="res://assets/sprites/particles/T_trail12.png"
+dest_files=["res://.godot/imported/T_trail12.png-cbb866aa3f7bfaeb89e8089e7e0a7f32.s3tc.ctex"]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0eyfyx2hr40s"
-path.s3tc="res://.godot/imported/container.png-83bb2d5eab7f6b3cfa161e196fd7da22.s3tc.ctex"
+uid="uid://do6pyrclnsn6k"
+path.s3tc="res://.godot/imported/T_fire_flipbook4_sm.png-24c901e71b69dee8f18ec05afbdfd1ce.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/sprites/suika/container.png"
-dest_files=["res://.godot/imported/container.png-83bb2d5eab7f6b3cfa161e196fd7da22.s3tc.ctex"]
+source_file="res://assets/sprites/particles/T_fire_flipbook4_sm.png"
+dest_files=["res://.godot/imported/T_fire_flipbook4_sm.png-24c901e71b69dee8f18ec05afbdfd1ce.s3tc.ctex"]
 
 [params]
 

@@ -2,9 +2,9 @@
 
 [ext_resource type="ArrayMesh" uid="uid://deu8dcn0cgce3" path="res://sword/sword_mesh.res" id="1_soo0v"]
 [ext_resource type="Shader" uid="uid://dcci1eyqo1y6i" path="res://sword/aura_shader.tres" id="1_ypg11"]
-[ext_resource type="Texture2D" uid="uid://d07su6qh5qdq1" path="res://sword/textures/T_PerlinNoise_Tiled.png" id="2_jejmn"]
-[ext_resource type="Texture2D" uid="uid://do6pyrclnsn6k" path="res://sword/textures/T_fire_flipbook4_sm.png" id="4_ur2ln"]
-[ext_resource type="Texture2D" uid="uid://byogepucn8tmy" path="res://sword/textures/T_trail12.png" id="5_gewjo"]
+[ext_resource type="Texture2D" uid="uid://d07su6qh5qdq1" path="res://assets/sprites/particles/T_PerlinNoise_Tiled.png" id="2_jejmn"]
+[ext_resource type="Texture2D" uid="uid://do6pyrclnsn6k" path="res://assets/sprites/particles/T_fire_flipbook4_sm.png" id="4_ur2ln"]
+[ext_resource type="Texture2D" uid="uid://byogepucn8tmy" path="res://assets/sprites/particles/T_trail12.png" id="5_gewjo"]
 
 [sub_resource type="Environment" id="Environment_g8ugn"]
 background_mode = 1

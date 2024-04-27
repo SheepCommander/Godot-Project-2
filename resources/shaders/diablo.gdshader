@@ -12,12 +12,12 @@ uniform float sharpness = 6.0;
 void fragment() {
 	//random hue = identity //alpha = LIFE time (not just scene TIME)
 	float particleSeed = COLOR.r / (COLOR.r + COLOR.b + COLOR.g);
-	
+
 	float adjustedTime = TIME + particleSeed * 11374.293247;
 	float tex1_intensity = texture(tex1, UV + particleSeed).r;
 	float tex2_intensity = texture(tex2, tex2_scale * (UV + adjustedTime * scroll2)).r;
 	float intensity = tex1_intensity * tex2_intensity;
-	
+
 	vec4 overlapColor = texture(overlapGradient, vec2(intensity * 3.5));
 	vec4 lifetimeColor = texture(lifetimeColorGradient, vec2(COLOR.a));
 	COLOR = lifetimeColor;

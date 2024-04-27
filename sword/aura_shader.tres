@@ -1,7 +1,7 @@
 [gd_resource type="VisualShader" load_steps=14 format=3 uid="uid://dcci1eyqo1y6i"]
 
 [ext_resource type="Texture2D" uid="uid://cbstdq600121o" path="res://sword/sword_mask.jpg" id="1_6uefh"]
-[ext_resource type="Texture2D" uid="uid://d07su6qh5qdq1" path="res://sword/textures/T_PerlinNoise_Tiled.png" id="1_edsci"]
+[ext_resource type="Texture2D" uid="uid://d07su6qh5qdq1" path="res://assets/sprites/particles/T_PerlinNoise_Tiled.png" id="1_edsci"]
 
 [sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_e4fln"]
 default_input_values = [0, Vector2(0, 0), 1, Vector2(0, 0)]

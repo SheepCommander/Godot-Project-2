@@ -16,10 +16,10 @@ func _ready():
 
 func _on_spawn_timer_timeout():
 	var new_fruit := fruits[randi() % fruits.size()].instantiate() #Random Fruit
-	
+
 	spawn_location.progress_ratio = randf() #Random point
 	new_fruit.position = spawn_location.position #To that position
 	new_fruit.rotation = spawn_location.rotation + Vector3(randf_range(-PI/4,PI/4),randf_range(-PI/4,PI/4),randf_range(-PI/4,PI/4))
-	
+
 	add_child(new_fruit) #Spawn mob
-	
+

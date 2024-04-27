@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do6pyrclnsn6k"
-path.s3tc="res://.godot/imported/T_fire_flipbook4_sm.png-d7246069f893de349edf7a39fbce4e75.s3tc.ctex"
+uid="uid://dlbv4h5b187u8"
+path.s3tc="res://.godot/imported/T_Noise1_tiled.png-6881acfc7898fdf3679065f3c6d2c261.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://sword/textures/T_fire_flipbook4_sm.png"
-dest_files=["res://.godot/imported/T_fire_flipbook4_sm.png-d7246069f893de349edf7a39fbce4e75.s3tc.ctex"]
+source_file="res://assets/sprites/particles/T_Noise1_tiled.png"
+dest_files=["res://.godot/imported/T_Noise1_tiled.png-6881acfc7898fdf3679065f3c6d2c261.s3tc.ctex"]
 
 [params]
 

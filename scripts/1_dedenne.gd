@@ -14,7 +14,7 @@ func _ready():
 	contact_monitor = true
 	merge_area.set_collision_mask_value(fruit_layer,true) #Listens for layer
 	self.set_collision_layer_value(fruit_layer,true) #Fruit exists on layer
-	
+
 	body_entered.connect(_on_body_entered)
 	visibility_notifier.screen_exited.connect(_on_visibility_notifier_screen_entered)
 
@@ -31,13 +31,13 @@ func _on_body_entered(_body): #On Collision
 func _merge(fruits):
 	var new_fruit := next_fruit.instantiate()
 	get_tree().current_scene.add_child(new_fruit)
-	
+
 	new_fruit.global_position = (fruits[0].global_position+fruits[1].global_position)/2
 	new_fruit.global_rotation = (fruits[0].global_rotation+fruits[1].global_rotation)/2
 	new_fruit.repeats = repeats
-	
+
 	merge_sfx.play()
-	
+
 	fruits.map(func(body): body.queue_free())
 
 ## Kills fruit after leaving screen
