@@ -27,9 +27,10 @@ func _on_body_entered(_body): #On Collision
 ## Kills all touching fruits of same-type, creates next fruit, plays `merge_sfx`
 func _merge(fruits):
 	var new_fruit := next_fruit.instantiate()
+	get_tree().current_scene.add_child(new_fruit)
+	
 	new_fruit.global_position = (fruits[0].global_position+fruits[1].global_position)/2
 	new_fruit.global_rotation = (fruits[0].global_rotation+fruits[1].global_rotation)/2
-	get_tree().current_scene.call_deferred("add_child",new_fruit)
 	
 	merge_sfx.play()
 	
