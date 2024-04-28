@@ -11,9 +11,8 @@ config_version=5
 [application]
 
 config/name="SheepStuff"
-run/main_scene="res://scenes/world.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://icon.jpg"
 
 [audio]
 
