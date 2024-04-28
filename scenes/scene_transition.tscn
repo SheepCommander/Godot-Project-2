@@ -307,11 +307,13 @@ grow_vertical = 2
 script = ExtResource("1_bx240")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-visible = false
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_8xgvj")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="TextureRect"]
+color = Color(0.205117, 0.205117, 0.205117, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

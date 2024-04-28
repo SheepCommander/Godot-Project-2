@@ -3,23 +3,11 @@ extends Control
 @onready var texture_rect := $TextureRect
 @onready var animation_player := $AnimationPlayer
 
-const ani := {
-	SLIDE = "Slide",
-	SPIN = "Spin",
-	FADE = "Fade",
-	DISSOLVE = "Dissolve",
-}
-
 #TODO: Make transitions actually... useful???
+@export_enum("Slide","Spin","Fade","Dissolve") var animation := "Slide"
 
 func _ready():
-	hide()
-	for i in range(1):
-		await play(ani.DISSOLVE,true)
-		await play(ani.SPIN)
-		await play(ani.SLIDE)
-		await play(ani.FADE)
-		await get_tree().create_timer(2).timeout
+	play(animation)
 
 
 func _get_screenshot(flip_x := false,flip_y := false):

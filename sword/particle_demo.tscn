@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://b0s7bid5v74uv"]
 
-[ext_resource type="Shader" path="res://resources/shaders/diablo.gdshader" id="1_7aspu"]
+[ext_resource type="Shader" path="res://sword/diablo.gdshader" id="1_7aspu"]
 [ext_resource type="Texture2D" uid="uid://bpqfcdgfkeewf" path="res://assets/sprites/particles/BasicParticle.png" id="2_pyhi7"]
 
 [sub_resource type="Gradient" id="Gradient_sp7am"]
